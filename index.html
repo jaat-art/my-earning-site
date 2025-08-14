@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>آپ کا برانڈ — کمائی کے لیے تیار پرو لیول لینڈنگ پیج</title>
+  <meta name="description" content="ون پیج پرو لیول سائٹ: ایڈز پلیس ہولڈرز، افیلیئیٹ آفرز، ڈیجیٹل پروڈکٹس، واٹس ایپ آرڈر، فارم لیڈ کیپچر۔ Vercel پر فری ہوسٹنگ کے لیے تیار۔" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💸</text></svg>"> 
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ["Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Tahoma", "system-ui"],
+            sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- OpenGraph for social sharing -->
+  <meta property="og:title" content="آپ کا برانڈ — کمائی کے لیے تیار" />
+  <meta property="og:description" content="افیلیئیٹ + ایڈز + ڈیجیٹل پروڈکٹس + لیڈ کیپچر۔" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1553729784-e91953dec042?q=80&w=1200&auto=format&fit=crop" />
+
+  <!-- JSON-LD: LocalBusiness + Product + FAQ  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aap Ka Brand",
+    "areaServed": "Pakistan",
+    "url": "https://yourdomain.vercel.app",
+    "sameAs": ["https://wa.me/923000000000"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Digital Products",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Product","name":"Crypto P2P Guide PDF","price": "1499 PKR"}},
+        {"@type":"Offer","itemOffered":{"@type":"Product","name":"Arbitrage Calculator (Excel)","price": "999 PKR"}}
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .container { max-width: 1200px; }
+    .glass { background: color-mix(in srgb, white 70%, transparent); backdrop-filter: blur(8px); }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+  <!-- Top strip -->
+  <div class="w-full bg-gray-900 text-gray-100">
+    <div class="container mx-auto flex items-center justify-between px-4 py-2 text-sm">
+      <span>💸 پرو لیول کمائی والی سائٹ — Vercel کے لیے تیار</span>
+      <div class="space-x-3 rtl:space-x-reverse">
+        <a href="#contact" class="underline">رابطہ</a>
+        <button id="themeToggle" class="px-2 py-1 rounded bg-gray-700">ڈارک/لائٹ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-gray-100 dark:bg-gray-900/90 dark:border-gray-800">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="text-2xl">🚀</span>
+        <span class="font-bold text-lg">آپ کا برانڈ</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 font-medium">
+        <a href="#offers" class="hover:text-blue-600">افیلیئیٹ آفرز</a>
+        <a href="#products" class="hover:text-blue-600">ڈیجیٹل پروڈکٹس</a>
+        <a href="#pricing" class="hover:text-blue-600">سروس پیکیجز</a>
+        <a href="#blog" class="hover:text-blue-600">بلاگ</a>
+        <a href="#faq" class="hover:text-blue-600">سوالات</a>
+      </nav>
+      <a href="https://wa.me/923000000000?text=Salam!%20Mujhe%20offers%20chahiye." target="_blank" class="md:inline-flex hidden bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl shadow">واٹس ایپ</a>
+      <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
+      <div class="px-4 py-3 space-y-3">
+        <a href="#offers" class="block">افیلیئیٹ آفرز</a>
+        <a href="#products" class="block">ڈیجیٹل پروڈکٹس</a>
+        <a href="#pricing" class="block">سروس پیکیجز</a>
+        <a href="#blog" class="block">بلاگ</a>
+        <a href="#faq" class="block">سوالات</a>
+        <a href="#contact" class="block">رابطہ</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-950">
+    <div class="container mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-6">
+        <h1 class="font-display text-3xl md:text-5xl font-extrabold leading-tight">
+          آج ہی کمائی شروع کریں — افیلیئیٹ + ایڈز + ڈیجیٹل پروڈکٹس
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300">
+          یہ ون پیج سائٹ fast، SEO-ready اور conversion-focused ہے۔ Vercel پر فری host کریں اور فوراً monetize کریں۔
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#offers" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl shadow">افیلیئیٹ آفرز دیکھیں</a>
+          <a href="#products" class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-xl shadow">ڈیجیٹل پروڈکٹس</a>
+        </div>
+        <ul class="grid grid-cols-2 gap-3 text-sm text-gray-700 dark:text-gray-300">
+          <li>✓ موبائل فرینڈلی</li>
+          <li>✓ فاسٹ لوڈنگ</li>
+          <li>✓ ایس ای او ریڈی</li>
+          <li>✓ آسان ایڈیٹنگ</li>
+        </ul>
+      </div>
+      <div class="relative">
+        <div class="aspect-video w-full rounded-2xl bg-white dark:bg-gray-800 shadow-lg border border-gray-100 dark:border-gray-700 p-4">
+          <div class="h-full w-full rounded-xl bg-gradient-to-tr from-blue-600/10 via-purple-600/10 to-pink-600/10 grid place-items-center">
+            <div class="text-center">
+              <div class="text-6xl mb-2">📈</div>
+              <p class="font-semibold">Monetization-Ready Template</p>
+              <p class="text-sm text-gray-500">Affiliate • Ads • Digital</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ads Placeholder (Replace with your AdSense code) -->
+  <section id="ads" class="py-8">
+    <div class="container mx-auto px-4">
+      <!-- NOTE: Replace this box with your actual ad scripts (AdSense/Ezoic). -->
+      <div class="rounded-2xl border border-dashed p-6 text-center text-sm text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 dark:border-gray-800">
+        <div class="mb-2 text-base font-semibold">Ads Placeholder</div>
+        <p>Google AdSense/دیگر نیٹ ورک کا کوڈ یہاں لگائیں (domain approval کے بعد). ابھی یہ صرف placeholder ہے۔</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Affiliate Offers -->
+  <section id="offers" class="py-16 md:py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">افیلیئیٹ آفرز (ہائی کنورژن)</h2>
+      <div id="offersGrid" class="grid md:grid-cols-3 gap-6"></div>
+      <p class="text-xs text-gray-500 mt-3">نوٹ: نیچے JavaScript میں <code>OFFERS</code> لسٹ اپنی افیلیئیٹ لنکس سے اپڈیٹ کریں (UTM سمیت).</p>
+    </div>
+  </section>
+
+  <!-- Digital Products -->
+  <section id="products" class="py-16 bg-gray-50 dark:bg-gray-950">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">ڈیجیٹل پروڈکٹس (انسٹنٹ ڈلیوری)</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Product 1 -->
+        <div class="p-6 rounded-2xl border bg-white shadow-sm dark:bg-gray-900 dark:border-gray-800">
+          <h3 class="font-bold text-lg">Crypto P2P Guide (PDF)</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">پاکستان/یو اے ای کے لیے عملی گائیڈ۔
+          </p>
+          <div class="text-xl font-extrabold my-4">Rs 1,499</div>
+          <!-- Replace Gumroad/Stripe Payment Link -->
+          <a href="https://buy.stripe.com/test_123456" target="_blank" class="inline-flex bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl">خریدیں</a>
+        </div>
+        <!-- Product 2 -->
+        <div class="p-6 rounded-2xl border bg-white shadow-sm dark:bg-gray-900 dark:border-gray-800">
+          <h3 class="font-bold text-lg">Arbitrage Calculator (Excel)</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">فیس/ریٹس ڈالیں اور فوری منافع دیکھیں۔</p>
+          <div class="text-xl font-extrabold my-4">Rs 999</div>
+          <a href="https://buy.stripe.com/test_ABCDE" target="_blank" class="inline-flex bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl">خریدیں</a>
+        </div>
+        <!-- Product 3 -->
+        <div class="p-6 rounded-2xl border bg-white shadow-sm dark:bg-gray-900 dark:border-gray-800">
+          <h3 class="font-bold text-lg">VIP WhatsApp Signals (Monthly)</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">P2P spreads + alerts.
+          </p>
+          <div class="text-xl font-extrabold my-4">Rs 4,999</div>
+          <a href="https://buy.stripe.com/test_VIP123" target="_blank" class="inline-flex bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-xl">سبسکرائب</a>
+        </div>
+      </div>
+      <p class="text-xs text-gray-500 mt-3">نوٹ: اوپر کے لنکس کو اپنے Stripe Payment Links / Gumroad URLs سے بدل دیں — backend کی ضرورت نہیں۔</p>
+    </div>
+  </section>
+
+  <!-- Services Pricing (optional upsell) -->
+  <section id="pricing" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">سروس پیکیجز (اختیاری)</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="relative p-6 rounded-2xl border bg-white shadow-sm dark:bg-gray-900 dark:border-gray-800">
+          <h3 class="font-bold text-xl">Starter</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">ون پیج سیٹ اپ + 3 آفرز امپلیمینٹ</p>
+          <div class="text-3xl font-extrabold my-4">Rs 7,500</div>
+          <a href="https://wa.me/923000000000?text=Starter%20package" target="_blank" class="mt-2 inline-flex bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl">بک کریں</a>
+        </div>
+        <div class="relative p-6 rounded-2xl border-2 border-blue-600 bg-white shadow-md dark:bg-gray-900 dark:border-blue-600">
+          <div class="absolute -top-3 right-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full">سب سے مقبول</div>
+          <h3 class="font-bold text-xl">Business</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">افیلیئیٹ + ایڈز + پروڈکٹس سیٹ اپ</p>
+          <div class="text-3xl font-extrabold my-4">Rs 12,500</div>
+          <a href="https://wa.me/923000000000?text=Business%20package" target="_blank" class="mt-2 inline-flex bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl">بک کریں</a>
+        </div>
+        <div class="relative p-6 rounded-2xl border bg-white shadow-sm dark:bg-gray-900 dark:border-gray-800">
+          <h3 class="font-bold text-xl">Pro</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">SEO + بلاگ + ای میل آٹومیٹ</p>
+          <div class="text-3xl font-extrabold my-4">Rs 19,500</div>
+          <a href="https://wa.me/923000000000?text=Pro%20package" target="_blank" class="mt-2 inline-flex bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl">بک کریں</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Magnet / Email Capture -->
+  <section id="lead" class="py-16 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-gray-950">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">فری گفٹ: P2P Quick Start PDF</h2>
+        <p class="text-gray-600 dark:text-gray-300">ای میل دیں — فوراً ڈاؤن لوڈ لنک ملے گا۔ بعد میں ہم بہترین آفرز/ڈیلز آپ کو بھیجیں گے۔</p>
+      </div>
+      <!-- Formspree (replace your ID) -->
+      <form action="https://formspree.io/f/your-id" method="POST" class="p-6 rounded-2xl glass border border-gray-200 dark:border-gray-800">
+        <label class="block text-sm mb-2">ای میل</label>
+        <input name="email" type="email" required class="w-full mb-4 px-3 py-2 rounded-xl border outline-none focus:ring" placeholder="you@example.com" />
+        <input type="hidden" name="tag" value="lead-magnet" />
+        <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl">ڈاؤن لوڈ لنک بھیجیں</button>
+        <p class="text-xs text-gray-500 mt-2">پرا ئیویسی: ہم اسپیم نہیں کرتے۔ آپ کبھی بھی انسبسکرائب کر سکتے ہیں۔</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Blog / SEO section (static cards; replace links with your posts/substack) -->
+  <section id="blog" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">بلاگ / گائیڈز</h2>
+      <div class="grid md:grid-cols-3 gap-6" id="blogGrid"></div>
+      <p class="text-xs text-gray-500 mt-3">SEO Tip: ہر ہفتے 2–3 پوسٹس اپلوڈ کریں، ٹاپکس: "UAE to PK P2P", "Fee breakdown", "Best wallets" وغیرہ۔</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-gray-50 dark:bg-gray-950">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-8">اکثر پوچھے گئے سوالات</h2>
+      <div class="space-y-4">
+        <details class="group border rounded-xl p-4 bg-white dark:bg-gray-900 dark:border-gray-800">
+          <summary class="cursor-pointer font-semibold">Ads کیسے لگائیں؟</summary>
+          <div class="mt-2 text-sm text-gray-600 dark:text-gray-300">اپنا AdSense approved اسنیپٹ لیں اور اس پیج کے <code>#ads</code> سیکشن میں placeholder کی جگہ پیسٹ کر دیں۔</div>
+        </details>
+        <details class="group border rounded-xl p-4 bg-white dark:bg-gray-900 dark:border-gray-800">
+          <summary class="cursor-pointer font-semibold">افیلیئیٹ لنکس؟</summary>
+          <div class="mt-2 text-sm text-gray-600 dark:text-gray-300">نیچے JavaScript میں <code>OFFERS</code> لسٹ edit کریں اور اپنی ٹریکڈ URLs شامل کریں۔</div>
+        </details>
+        <details class="group border rounded-xl p-4 bg-white dark:bg-gray-900 dark:border-gray-800">
+          <summary class="cursor-pointer font-semibold">Payment کیسے ہوگا؟</summary>
+          <div class="mt-2 text-sm text-gray-600 dark:text-gray-300">Stripe Payment Links یا Gumroad URLs استعمال کریں — backend کی ضرورت نہیں۔</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">رابطہ کریں</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="space-y-3 text-gray-700 dark:text-gray-300">
+          <p>سپورٹ/کولیبریشن کے لیے واٹس ایپ/ای میل کریں۔</p>
+          <p>ای میل: <a class="underline" href="mailto:you@example.com">you@example.com</a></p>
+          <a href="https://wa.me/923000000000?text=Assalam!%20Mujhe%20offers%20chahiye" target="_blank" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl">واٹس ایپ پیغام</a>
+        </div>
+        <form action="https://formspree.io/f/your-id" method="POST" class="p-6 rounded-2xl border bg-white shadow-sm dark:bg-gray-900 dark:border-gray-800">
+          <label class="block text-sm mb-2">نام</label>
+          <input name="name" required class="w-full mb-4 px-3 py-2 rounded-xl border outline-none focus:ring" placeholder="آپ کا نام" />
+          <label class="block text-sm mb-2">ای میل</label>
+          <input name="email" type="email" required class="w-full mb-4 px-3 py-2 rounded-xl border outline-none focus:ring" placeholder="you@example.com" />
+          <label class="block text-sm mb-2">پیغام</label>
+          <textarea name="message" rows="4" class="w-full mb-4 px-3 py-2 rounded-xl border outline-none focus:ring" placeholder="اپنی ضروریات لکھیں"></textarea>
+          <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl">جمع کریں</button>
+          <p class="text-xs text-gray-500 mt-3">واٹس ایپ لنک بھی اوپر موجود ہے۔</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t bg-white dark:bg-gray-900 dark:border-gray-800">
+    <div class="container mx-auto px-4 text-sm text-gray-600 dark:text-gray-400 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="year"></span> آپ کا برانڈ — کمائی کے لیے تیار</p>
+      <div class="flex items-center gap-3">
+        <a class="underline" href="#">پرائیویسی</a>
+        <a class="underline" href="#">ٹرمز</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/923000000000?text=Assalam!%20Mujhe%20offers%20chahiye" target="_blank" class="fixed bottom-5 left-5 md:left-auto md:right-5 z-40 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-full shadow-lg">
+    <span>واٹس ایپ</span> ☎️
+  </a>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Dark/Light toggle
+    const toggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark');
+      document.body.classList.add('bg-gray-950','text-gray-100');
+    }
+    toggle.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      const isDark = root.classList.contains('dark');
+      document.body.classList.toggle('bg-gray-950', isDark);
+      document.body.classList.toggle('text-gray-100', isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    // -------- Affiliate Offers (EDIT THIS LIST) --------
+    const OFFERS = [
+      {
+        title: 'Binance P2P (Affiliate)',
+        desc: 'کم فیس + زیادہ والیم۔ نیا اکاؤنٹ بنائیں اور فیس میں ڈسکاؤنٹ لیں۔',
+        url: 'https://example.com/binance?ref=YOURID&utm_source=site',
+        badge: 'کمییشن + ڈسکاؤنٹ',
+        image: 'https://images.unsplash.com/photo-1621416894569-0f39c2e4bf1a?q=80&w=1200&auto=format&fit=crop'
+      },
+      {
+        title: 'Bybit P2P (Affiliate)',
+        desc: 'اچھی پھیلاؤ (spread) اور تیز ٹرانزیکشنز۔',
+        url: 'https://example.com/bybit?ref=YOURID&utm_source=site',
+        badge: 'ہائی کنورژن',
+        image: 'https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1200&auto=format&fit=crop'
+      },
+      {
+        title: 'Wise / Payoneer (Referral)',
+        desc: 'انٹرنیشنل کلائنٹس سے پیمنٹ لیں—کم فیس ٹرانسفرز۔',
+        url: 'https://example.com/payments?ref=YOURID&utm_source=site',
+        badge: '$ Bonus',
+        image: 'https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=1200&auto=format&fit=crop'
+      }
+    ];
+
+    const offersGrid = document.getElementById('offersGrid');
+    OFFERS.forEach(o => {
+      const card = document.createElement('div');
+      card.className = 'rounded-2xl overflow-hidden border bg-white shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800';
+      card.innerHTML = `
+        <img loading="lazy" src="${o.image}" alt="${o.title}" class="w-full h-44 object-cover">
+        <div class="p-5">
+          <div class="text-xs inline-flex px-2 py-1 rounded-full bg-blue-100 text-blue-700">${o.badge}</div>
+          <h3 class="font-bold text-lg mt-3">${o.title}</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">${o.desc}</p>
+          <a href="${o.url}" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl">مزید دیکھیں</a>
+        </div>`;
+      offersGrid.appendChild(card);
+    });
+
+    // -------- Blog Cards (EDIT LINKS) --------
+    const BLOGS = [
+      {title:'UAE → PK P2P Complete Guide', url:'#', image:'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop'},
+      {title:'Fee Calculator & Hidden Costs', url:'#', image:'https://images.unsplash.com/photo-1523289333742-be1143f6b766?q=80&w=1200&auto=format&fit=crop'},
+      {title:'Best Wallets for Remittance', url:'#', image:'https://images.unsplash.com/photo-1556741533-411cf82e4e2d?q=80&w=1200&auto=format&fit=crop'}
+    ];
+    const blogGrid = document.getElementById('blogGrid');
+    BLOGS.forEach(b => {
+      const card = document.createElement('a');
+      card.href = b.url;
+      card.target = '_blank';
+      card.className = 'rounded-2xl overflow-hidden border bg-white shadow-sm hover:shadow-md transition dark:bg-gray-900 dark:border-gray-800';
+      card.innerHTML = `
+        <img loading="lazy" src="${b.image}" alt="${b.title}" class="w-full h-44 object-cover">
+        <div class="p-5">
+          <h3 class="font-bold text-lg mt-1">${b.title}</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">تفصیل پڑھیں →</p>
+        </div>`;
+      blogGrid.appendChild(card);
+    });
+  </script>
+
+  <!-- (Optional) Privacy-friendly analytics like Plausible -->
+  <!-- <script defer data-domain="yourdomain.vercel.app" src="https://plausible.io/js/script.js"></script> -->
+
+</body>
+</html>
+Add index.html
